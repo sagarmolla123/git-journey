@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Login Form -->
+    <div id="login-form">
+        <h2>Login</h2>
+
+        <input type="email" placeholder="Enter Email">
+        <input type="password" placeholder="Enter Password">
+
+        <button>Login</button>
+
+        <p>
+            Don't have an account?
+            <span onclick="showSignup()">Signup</span>
+        </p>
+    </div>
+
+    <!-- Signup Form -->
+    <div id="signup-form" class="hidden">
+        <h2>Signup</h2>
+
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Enter Email">
+        <input type="password" placeholder="Create Password">
+
+        <button>Signup</button>
+
+        <p>
+            Already have an account?
+            <span onclick="showLogin()">Login</span>
+        </p>
+    </div>
+
+</div>
+
+<script>
+function showSignup() {
+    document.getElementById("login-form").classList.add("hidden");
+    document.getElementById("signup-form").classList.remove("hidden");
+}
+
+function showLogin() {
+    document.getElementById("signup-form").classList.add("hidden");
+    document.getElementById("login-form").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
